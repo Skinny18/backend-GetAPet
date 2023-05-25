@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
-
-const uri = "mongodb+srv://gcgabriel257:bielcarlos2503@cluster0.dtnkjb1.mongodb.net/?retryWrites=true&w=majority";
+require('dotenv').config()
+const PASS = process.env.B_PASS
+const USER = process.env.B_USER
+const uri = `mongodb+srv://${USER}:${PASS}@cluster0.dtnkjb1.mongodb.net/?retryWrites=true&w=majority`;
 
 async function main(){
     
